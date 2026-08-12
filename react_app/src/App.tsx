@@ -1,7 +1,7 @@
 import Card from "./components/Card";
 
 function App() {
-  return <Card></Card>;
+  return <Card body={"Hola benja"} />;
 }
 
 export default App;
