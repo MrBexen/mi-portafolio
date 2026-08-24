@@ -1,8 +1,9 @@
 import Card, { CardBody } from "./components/Card";
 import List from "./components/List";
 //Componente raiz
+
 function App() {
-  const list = ["Gundam", "Guncannon", "Guntank"];
+  const list: string[] = [];
   const handleSelect = (element: string) => {
     console.log("imprimiendo ", element);
   };
@@ -10,11 +11,17 @@ function App() {
   const handleSelect2 = (element: string) => {
     console.log("mostrando ", element);
   };
+
   return (
     <Card>
+      {/* Renderizado condicional*/}
+
       <CardBody title="Hola mundo" text="Este es el texto" />
-      <List data={list} onSelect={handleSelect} />
-      <List data={list} onSelect={handleSelect2} />
+      {list.length !== 0 ? (
+        <List data={list} onSelect={handleSelect} />
+      ) : (
+        "No hay contenido"
+      )}
     </Card>
   );
 }

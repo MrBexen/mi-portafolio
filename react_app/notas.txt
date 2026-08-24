@@ -1,0 +1,53 @@
+========================== Notas sobre React ===============================
+
+Props (propiedades): Son la forma en que los componentes de React se comunican
+entre si. Son fragmentos de información que un componente padre le pasa a un
+componente hijo.
+
+Caracteristicas:
+- Son unidireccionales. Fluyen siempre de arriba hacia abajo (del componente padre al hijo).
+- Son inmutables. Un componente hijo jamás debe modificar las props que recibe. 
+  Si los datos deben cambiar, el dueño de esa información debe ser el padre.
+- Puede ser cualquier tipo de dato. 
+
+
+State (estado): Es un objeto que guarda la información dinámica de un componente.
+
+Caracteristicas: 
+
+- Es local y puede cambiar a lo largo del tiempo
+- Si el estado cambia, la interfaz visual se actualiza automáticamente.
+- Es completamente controlado y visible solo dentro del componente que lo declara. 
+- la actualización del estado no ocurre de inmediato; React agurpa los cambios
+  para mejorar el rendimiento. 
+
+Keys (Llaves en Listas): Al renderizar una lista de elementos en React, React te
+Obliga a ponerle un atributo único llamado "Key" a cada elemento. Es como el 
+carnet de identidad único de cada elemento de la lista. Le sirve a React para 
+saber exactamente cuál elemento se borró, cuál cambió o cuál se movió de posición
+sin tener que volver a dibujar toda la lista desde cero, ahorrando memoria y procesador. 
+
+Hooks: Son funciones especiales de React que permiten "enganchar" características
+del nucleo de React (como el estado) dentro  de componentes funcionales. Todos
+Empizean con la palabra "use". 
+
+Regla de oro: Solo se pueden llamar en la parte más alta del componente.
+
+
+JSX (Javascript XML): Es la sintaxis que permite escribir codigo parecido a HTML
+directamente dentro del archivo JavaScript.
+
+- No es HTML real, es una forma visual y cómoda de decirle a React:"Quiero
+que crees este objeto visual". Por detrás, React convierte ese "HTML" en objetos
+puros de javascript. 
+
+Falsy: 
+        -0
+        -""
+        -false
+        - undefined
+        - null
+
+ej:
+  {"" && "string vacio"} = esto 
+

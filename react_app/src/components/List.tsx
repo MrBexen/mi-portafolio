@@ -7,7 +7,7 @@ type Props = {
 
 function List({ data, onSelect }: Props) {
   //Hook (State Hook)
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(-1);
   const handleClick = (i: number, element: string) => {
     setIndex(i);
     onSelect?.(element);
