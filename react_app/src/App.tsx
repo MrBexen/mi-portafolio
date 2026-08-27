@@ -1,9 +1,14 @@
 import Card, { CardBody } from "./components/Card";
+import Button from "./components/Button";
 import List from "./components/List";
+import { useState } from "react";
 //Componente raiz
 
 function App() {
-  const list: string[] = [];
+  const [isLoading, setIsLoading] = useState(false);
+  const handleClick = () => setIsLoading(!isLoading);
+
+  const list: string[] = ["Gundam", "Guncannon", "Guntank"];
   const handleSelect = (element: string) => {
     console.log("imprimiendo ", element);
   };
@@ -22,6 +27,9 @@ function App() {
       ) : (
         "No hay contenido"
       )}
+      <Button isLoading={isLoading} onClick={handleClick}>
+        Hola Mundo
+      </Button>
     </Card>
   );
 }
