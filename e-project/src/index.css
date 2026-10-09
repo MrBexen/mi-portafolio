@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff; /* Fuerza el fondo blanco a nivel global */
+  color: #1e293b; /* Cambia el texto global a oscuro */
+}
+
+.welcome {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.welcome__content {
+  max-width: 700px;
+  text-align: center;
+}
