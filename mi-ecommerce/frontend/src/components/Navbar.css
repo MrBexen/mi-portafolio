@@ -1,0 +1,170 @@
+/* PALETA DE COLORES */
+
+:root {
+  --color-primary: #244a80;
+  --color-primary-dark: #142747;
+  --color-accent: #3979d9;
+  --color-text: #ffffff;
+  --color-hover: #8db7f5;
+}
+
+/* NAVBAR PRINCIPAL */
+
+.navbar {
+  width: 100%;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGOTIPO */
+
+.logo {
+  color: var(--color-hover);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* NAVEGACIÓN */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #dce8ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-hover);
+}
+
+/* ACCIONES DEL USUARIO */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cart-icon,
+.user-icon {
+  color: var(--color-text);
+  text-decoration: none;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  transition: color 0.2s ease;
+}
+
+.cart-icon:hover,
+.user-icon:hover {
+  color: var(--color-hover);
+}
+
+/* CONTADOR DEL CARRITO */
+
+.cart-count {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+
+  background-color: var(--color-accent);
+  color: white;
+
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* BOTÓN DEL MENÚ MÓVIL */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* MENÚ MÓVIL */
+
+.mobile-menu {
+  display: none;
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 16px 24px;
+
+    background-color: var(--color-primary);
+    border-top: 1px solid #34547e;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease;
+  }
+
+  .mobile-menu a:hover {
+    background-color: #345b91;
+  }
+}

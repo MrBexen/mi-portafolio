@@ -1,0 +1,87 @@
+/* Contenedor principal */
+.catalogo {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Encabezado */
+.catalogo-header {
+  margin-bottom: 30px;
+}
+
+.catalogo-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.catalogo-header p {
+  color: #777;
+}
+
+/* Cuadrícula de productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Tarjeta individual */
+.producto-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el cursor */
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Información del producto */
+.producto-info h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.producto-info p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.producto-info > span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Precio */
+.producto-info h3 {
+  font-size: 1.5rem;
+  margin: 16px 0;
+  color: #222;
+}
+
+/* Características */
+.producto-detalles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.producto-detalles span {
+  background-color: #eee;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
